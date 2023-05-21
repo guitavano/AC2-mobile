@@ -10,6 +10,7 @@ import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
 import retrofit2.http.Path;
 
 public interface ApiService {
@@ -30,15 +31,22 @@ public interface ApiService {
             @Field("dataInicio") String dataInicio,
             @Field("dataFim") String dataFim,
             @Field("idProfessor") String idProfessor,
-            @Field("curso") String curso
+            @Field("curso") String curso,
+            @Field("resumo") String resumo
     );
 
     @FormUrlEncoded
-    @POST("/resumo")
+    @PUT("/agenda/{slug}")
     Call<Void> inserirResumo(
+            @Path("slug") String slug,
             @Field("id") String id,
+            @Field("dataInicio") String dataInicio,
+            @Field("dataFim") String dataFim,
+            @Field("idProfessor") String idProfessor,
+            @Field("curso") String curso,
             @Field("resumo") String resumo
     );
+
 
     @GET("/agenda")
     Call<List<Agenda>> obterAgendas();

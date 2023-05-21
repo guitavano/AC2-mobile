@@ -10,10 +10,20 @@
         android:id="@+id/resumo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="224dp"
         android:hint="Digite o resumo aqui..."
         app:layout_constraintTop_toBottomOf="@+id/txtResumo"
-        tools:layout_editor_absoluteX="-16dp" />
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/btnSalvarResumo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="4dp"
+        android:text="Salvar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resumo" />
 
     <TextView
         android:id="@+id/textView3"
@@ -34,13 +44,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-    <Button
-        android:id="@+id/btnSalvarResumo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        android:text="Salvar"
+    <TextView
+        android:id="@+id/resume"
+        android:layout_width="364dp"
+        android:layout_height="110dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/resumo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resumo" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

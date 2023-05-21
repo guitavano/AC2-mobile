@@ -34,8 +34,8 @@
 
     <TableLayout
         android:id="@+id/tableLayout"
-        android:layout_width="348dp"
-        android:layout_height="527dp"
+        android:layout_width="412dp"
+        android:layout_height="523dp"
         android:layout_marginTop="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,87 +61,6 @@
             android:layout_height="match_parent" />
 
     </TableLayout>
-
-    <Button
-        android:id="@+id/btn_resumo1"
-        android:layout_width="49dp"
-        android:layout_height="42dp"
-        android:text="+"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_resumo" />
-
-    <Button
-        android:id="@+id/btn_resumo2"
-        android:layout_width="49dp"
-        android:layout_height="42dp"
-        android:text="+"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_resumo1" />
-
-    <Button
-        android:id="@+id/btn_resumo4"
-        android:layout_width="49dp"
-        android:layout_height="42dp"
-        android:text="+"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_resumo3" />
-
-    <Button
-        android:id="@+id/btn_resumo5"
-        android:layout_width="49dp"
-        android:layout_height="42dp"
-        android:text="+"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_resumo4" />
-
-    <Button
-        android:id="@+id/btn_resumo"
-        android:layout_width="49dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="8dp"
-        android:text="+"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtCurso" />
-
-    <Button
-        android:id="@+id/btn_resumo6"
-        android:layout_width="49dp"
-        android:layout_height="42dp"
-        android:text="+"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_resumo5" />
-
-    <Button
-        android:id="@+id/btn_resumo7"
-        android:layout_width="49dp"
-        android:layout_height="42dp"
-        android:text="+"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_resumo6" />
-
-    <Button
-        android:id="@+id/btn_resumo8"
-        android:layout_width="49dp"
-        android:layout_height="42dp"
-        android:text="+"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_resumo9" />
-
-    <Button
-        android:id="@+id/btn_resumo9"
-        android:layout_width="49dp"
-        android:layout_height="42dp"
-        android:text="+"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_resumo7" />
-
-    <Button
-        android:id="@+id/btn_resumo3"
-        android:layout_width="49dp"
-        android:layout_height="42dp"
-        android:text="+"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_resumo2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

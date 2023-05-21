@@ -17,9 +17,6 @@
             android:name=".resumo"
             android:exported="false" />
         <activity
-            android:name=".resumo_1"
-            android:exported="false" />
-        <activity
             android:name=".cadastra_agenda"
             android:exported="false" />
         <activity
