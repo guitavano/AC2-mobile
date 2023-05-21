@@ -33,6 +33,13 @@ public interface ApiService {
             @Field("curso") String curso
     );
 
+    @FormUrlEncoded
+    @POST("/resumo")
+    Call<Void> inserirResumo(
+            @Field("id") String id,
+            @Field("resumo") String resumo
+    );
+
     @GET("/agenda")
     Call<List<Agenda>> obterAgendas();
 

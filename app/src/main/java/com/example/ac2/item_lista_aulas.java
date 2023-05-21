@@ -30,6 +30,24 @@ public class item_lista_aulas extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_lista_aulas);
 
+        Button btnResumo = findViewById(R.id.btn_resumo);
+        btnResumo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(item_lista_aulas.this, resumo.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btnResumo1 = findViewById(R.id.btn_resumo1);
+        btnResumo1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(item_lista_aulas.this, resumo_1.class);
+                startActivity(intent);
+            }
+        });
+
         Button voltarLista = findViewById(R.id.voltarLista);
         voltarLista.setOnClickListener(new View.OnClickListener() {
             @Override
