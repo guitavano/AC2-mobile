@@ -83,7 +83,7 @@ public class item_lista_aulas extends AppCompatActivity {
 
         // Configurar layout dos campos
         TableRow.LayoutParams layoutParams = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT);
-        layoutParams.setMargins(30, 30, 30, 30);
+        layoutParams.setMargins(10, 10, 10, 10);
 
         // Criar TextViews para cada campo da agenda
         TextView textViewDataInicio = new TextView(this);
@@ -126,11 +126,36 @@ public class item_lista_aulas extends AppCompatActivity {
         textViewCurso.setLayoutParams(layoutParams);
         textViewCurso.setText(agenda.getCurso());
 
+        // Criar um botão
+        Button button = new Button(this);
+        button.setLayoutParams(layoutParams);
+        button.setText("+");
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String mensagem = agenda.getResumo();
+
+
+                Intent intent = new Intent(item_lista_aulas.this, resumo.class);
+                intent.putExtra("id", agenda.getId());
+                intent.putExtra("dataInicio", agenda.getDataInicio());
+                intent.putExtra("dataFim", agenda.getDataFim());
+                intent.putExtra("idProfessor", agenda.getIdProfessor());
+                intent.putExtra("curso", agenda.getCurso());
+                intent.putExtra("resumo", agenda.getResumo());
+
+
+                startActivity(intent);
+            }
+        });
+
         // Adicionar os TextViews à linha
         tableRow.addView(textViewDataInicio);
         tableRow.addView(textViewDataFim);
         tableRow.addView(textViewIdProfessor);
         tableRow.addView(textViewCurso);
+        tableRow.addView(button);
 
         // Adicionar a linha à tabela
         tableLayout.addView(tableRow);

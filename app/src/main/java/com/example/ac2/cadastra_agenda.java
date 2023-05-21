@@ -46,13 +46,14 @@ public class cadastra_agenda extends AppCompatActivity {
                 String dataFim = editDataFim.getText().toString();
                 String idProfessor = editIdProfessor.getText().toString();
                 String curso = editCurso.getText().toString();
+                String resumo = "";
 
-                cadastrarAgenda(dataInicio, dataFim, idProfessor, curso);
+                cadastrarAgenda(dataInicio, dataFim, idProfessor, curso, resumo);
             }
         });
     }
 
-    private void cadastrarAgenda(String dataInicio, String dataFim, String idProfessor, String curso) {
+    private void cadastrarAgenda(String dataInicio, String dataFim, String idProfessor, String curso, String resumo) {
         String url = "https://6306b2db3a2114bac7536404.mockapi.io/api/v1/";
 
         Retrofit retrofit = new Retrofit.Builder()
@@ -62,7 +63,7 @@ public class cadastra_agenda extends AppCompatActivity {
 
         ApiService apiService = retrofit.create(ApiService.class);
 
-        Call<Void> call = apiService.cadastrarAgenda("",dataInicio, dataFim, idProfessor, curso);
+        Call<Void> call = apiService.cadastrarAgenda("",dataInicio, dataFim, idProfessor, curso, resumo);
         call.enqueue(new Callback<Void>() {
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {
